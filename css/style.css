@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap');
+body,p,h1,li,ul,ol,blockquote {
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: 'Vollkorn', Georgia, serif;
+}
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+}
+
+/* Grid geral */
+
+.estrutura{
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+  grid-template-areas: 
+    "header header header"
+    "sidenav content anuncios"
+    "footer footer footer"
+  ;
+}
+/* Header */
+.header{
+  grid-area: header;
+  background: linear-gradient(135deg,#8360c3,#2ebf91);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+.header nav ul{
+  display: flex;
+  flex-wrap: wrap;
+} 
+.header nav a{
+  display: block;
+  padding: 10px;
+  color: #fff;
+  font-size: 1.125rem;
+  background: rgba(0, 0, 0,.1);
+  transition: .1s;
+  border-radius: 5px;
+}
+.header nav a:hover{
+  background: rgba(0, 0, 0,.5);
+}
+
+.header nav li + li{
+  margin-left: 30px;
+}
+
+.logo{
+  max-width: 200px;
+}
+/* sidenav */
+
+.sidenav{
+  grid-area: sidenav;
+  background: #fafbfc;
+  padding: 30px;
+}
+
+.sidenav li a{
+  display: block;
+  min-width: 60px;
+  max-width: 100px;
+  margin: 0 auto 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0 rgba(44,44,44,.15);
+  transition: .1s ease-in-out;
+}
+.sidenav li a:hover {
+  background: #8360c3;
+}
+
+
+
+
+
+
+
+
+
+
+.content{
+  grid-area: content;
+}
+.anuncios{
+  grid-area: anuncios;
+}
+.footer{
+  grid-area: footer;
+}
+
+
+
+
